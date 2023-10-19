@@ -1,0 +1,13 @@
+name = "dawn-meadow-d0e0"
+main = "src/index.ts"
+compatibility_date = "2023-10-16"
+
+[durable_objects]
+bindings = [
+    { name = "COUNTER_SHARD_MAP", class_name = "CounterShardMap" },
+    { name = "COUNTER", class_name = "Counter" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["CounterShardMap", "Counter"]
